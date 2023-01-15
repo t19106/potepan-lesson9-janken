@@ -200,6 +200,7 @@ class Io
         line
         puts "ゲームを終了します"
     end
+    # 空白の入力を除外し、１桁の数字以外の文字列は正規表現で弾く
     def choice_refinement
         @choice = @choice.empty? ? 6 : @choice
         @choice = @choice =~ /^[0-9]$/ ? @choice.to_i : 6
